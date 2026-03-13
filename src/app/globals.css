@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-retro-1995-bg: #c0c0c0;
+  --color-retro-1995-surface: #ffffff;
+  --color-retro-1995-primary: #000080;
+  --color-retro-1995-text: #000000;
+  --color-retro-1995-border: #808080;
+  
+  --color-retro-2005-bg: #e2e8f0;
+  --color-retro-2005-surface: #ffffff;
+  --color-retro-2005-primary: #3b82f6;
+  --color-retro-2005-text: #1e293b;
+  --color-retro-2005-border: #cbd5e1;
+
+  --color-retro-2015-bg: #f8fafc;
+  --color-retro-2015-surface: #ffffff;
+  --color-retro-2015-primary: #ec4899;
+  --color-retro-2015-text: #0f172a;
+  --color-retro-2015-border: #e2e8f0;
+
+  --color-retro-bg: var(--retro-bg);
+  --color-retro-surface: var(--retro-surface);
+  --color-retro-primary: var(--retro-primary);
+  --color-retro-text: var(--retro-text);
+  --color-retro-border: var(--retro-border);
+
+  /* Fonts */
+  --font-pixel: "Press Start 2P", monospace;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-retro: var(--retro-font);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --retro-bg: #1e293b; 
+    --retro-surface: #0f172a;
+    --retro-primary: #3b82f6;
+    --retro-text: #f8fafc;
+    --retro-border: #334155;
+    --retro-font: var(--font-inter);
+  }
+
+  .theme-1995 {
+    --retro-bg: #008080;
+    --retro-surface: #c0c0c0;
+    --retro-primary: #000080;
+    --retro-text: #000000;
+    --retro-border: #ffffff; /* Typically 3D border, simplifying here */
+    --retro-font: "Courier New", monospace; /* A classic safe font; we could load a Pixel font later */
+  }
+
+  .theme-2005 {
+    --retro-bg: #e5eef9;
+    --retro-surface: #ffffff;
+    --retro-primary: #106fce;
+    --retro-text: #333333;
+    --retro-border: #b8cce4;
+    --retro-font: "Verdana", sans-serif;
+  }
+
+  .theme-2015 {
+    --retro-bg: #fafafa;
+    --retro-surface: #ffffff;
+    --retro-primary: #ff3366;
+    --retro-text: #222222;
+    --retro-border: #eaeaea;
+    --retro-font: var(--font-inter);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--retro-bg);
+  color: var(--retro-text);
+  font-family: var(--retro-font);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Base custom classes to avoid inline style duplication */
+.retro-window-1995 {
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  box-shadow: inset 1px 1px #fff, inset -1px -1px #808080;
+  background: var(--retro-surface);
+}
+
+.retro-window-2005 {
+  border: 1px solid #99c1e2;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #fcfefe 0%, #e6f0f9 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.retro-window-2015 {
+  border: 1px solid var(--retro-border);
+  border-radius: 12px;
+  background: var(--retro-surface);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }

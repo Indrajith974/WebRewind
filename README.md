@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebRewind
+
+## Overview
+
+WebRewind is a nostalgic web application built with **Next.js**, **React**, and **Tailwind CSS**. It allows users to travel through the history of the web, exploring an archive of over 50,000 historical websites powered by **Supabase**. The platform features retro UI themes (1995 Web, 2005 Web 2.0, 2015 Modern), a functional 1990s desktop emulator for the "Birthday Simulator," and a functional vintage Netscape Navigator emulator powered by the **Wayback Machine API**.
+
+For detailed architecture and module information, please refer to the `/docs` folder.
+
+## Key Features
+
+- **Endless Timeline Archive:** Browse over 50,000 domains natively fetched from a Supabase database via an infinite-scrolling intersection observer.
+- **Birthday Simulator:** Enter your birthdate to spin up a virtual Windows 95 desktop environment. A custom **Gemini 2.5 Flash LLM** integration generates historically accurate "Notepad" diary entries, while an integrated iframe browses iconic websites from that exact era.
+- **Retro Emulation View:** The `/browser/[year]` route spins up a classic Netscape Navigator interface that loads functional, click-through web archives natively fetched from the Wayback Machine API.
+- **Global Search:** Find any specific site in history using the debounced global search bar in the sticky navigation menu.
+- **Dynamic Theming:** Switch instantly between 1995, 2005, and 2015 CSS design languages, heavily utilizing CSS Variables and Tailwind.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 20+
+- Supabase Account
+- Google Gemini API Key
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone & Install**
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Environment Variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   GEMINI_API_KEY=your_gemini_key
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Database Setup**
+   Run the SQL schema located in `schema.sql` within your Supabase SQL Editor. 
+   Then, populate the database by running the scraping script:
+   ```bash
+   npx tsx scripts/importWebsites.ts
+   ```
 
-## Learn More
+4. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For a deeper dive into the codebase, check out the `/docs` directory:
+- [docs/overview.md](docs/overview.md) - High-level app architecture and Tech Stack
+- [docs/components.md](docs/components.md) - Deep dive into UI modules (Search, Timeline, Windows)
+- [docs/routes.md](docs/routes.md) - Insight into Next.js App Router endpoints and APIs
+- [docs/database.md](docs/database.md) - Supabase integration and the 50,000 site data scraper
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT License.
