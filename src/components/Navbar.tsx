@@ -11,7 +11,7 @@ const themes = [
 ];
 
 export function Navbar() {
-  const [currentTheme, setCurrentTheme] = useState("theme-1995");
+  const [currentTheme, setCurrentTheme] = useState("theme-2015");
   const [mounted, setMounted] = useState(false);
 
   const applyTheme = (themeId: string) => {
@@ -24,7 +24,7 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem("retro-theme") || "theme-1995";
+    const saved = localStorage.getItem("retro-theme") || "theme-2015";
     // eslint-disable-next-line react-hooks/set-state-in-effect
     applyTheme(saved);
     setMounted(true);
