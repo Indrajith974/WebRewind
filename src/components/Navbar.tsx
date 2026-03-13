@@ -49,7 +49,7 @@ export function Navbar() {
           >
             <span>❓</span> Era Quiz
           </Link>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap justify-center items-center gap-2">
           {themes.map((theme) => {
             const Icon = theme.icon;
             const isActive = currentTheme === theme.id;
@@ -57,7 +57,7 @@ export function Navbar() {
               <button
                 key={theme.id}
                 onClick={() => applyTheme(theme.id)}
-                className={`flex items-center gap-2 px-3 py-1.5 text-sm font-medium transition-all ${
+                className={`flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm font-medium transition-all ${
                   isActive
                     ? "bg-[var(--retro-primary)] text-white shadow-inner"
                     : "bg-transparent text-[var(--retro-text)] hover:bg-[var(--retro-bg)]"

@@ -25,7 +25,7 @@ export default function Home() {
             <RandomizerButton />
             <Link 
               href="/birthday-internet"
-              className="bg-[#008080] w-[280px] text-center text-white font-bold px-6 py-4 border-b-4 border-r-4 border-black hover:-translate-y-1 hover:shadow-lg transition-all"
+              className="bg-[#008080] w-full max-w-[320px] text-center text-white font-bold px-6 py-4 border-b-4 border-r-4 border-black hover:-translate-y-1 hover:shadow-lg transition-all"
             >
               🎂 TRY THE BIRTHDAY SIMULATOR
             </Link>
