@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://web-rewind-7jt2.vercel.app/sitemap.xml',
+    sitemap: 'https://netnostalgia-7jt2.vercel.app/sitemap.xml',
   }
 }

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { internetHistory } from '@/data/internetHistory';
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://web-rewind-7jt2.vercel.app';
+  const baseUrl = 'https://netnostalgia-7jt2.vercel.app';
 
   // Base routes
   const routes: MetadataRoute.Sitemap = [
