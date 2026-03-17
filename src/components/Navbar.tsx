@@ -37,7 +37,7 @@ export function Navbar() {
       <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3 text-[var(--retro-primary)] whitespace-nowrap">
           <History className="h-8 w-8" />
-          <h1 className="text-xl font-bold tracking-tight">WebRewind Archive</h1>
+          <h1 className="text-xl font-bold tracking-tight">NetNostalgia Archive</h1>
         </Link>
         <div className="w-full xl:w-auto xl:max-w-md xl:flex-grow flex justify-center mt-2 xl:mt-0 relative z-[60]">
             <GlobalSearch />

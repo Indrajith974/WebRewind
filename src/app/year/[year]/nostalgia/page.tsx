@@ -85,7 +85,7 @@ export default async function NostalgiaSharePage({ params }: Props) {
         </div>
 
         <div className="mt-8 text-center text-sm opacity-60">
-          <p>Created by WebRewind</p>
+          <p>Created by NetNostalgia</p>
           <Link href="/" className="text-[var(--retro-primary)] underline">Experience the timeline</Link>
         </div>
       </div>

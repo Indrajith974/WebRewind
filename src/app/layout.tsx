@@ -9,8 +9,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "WebRewind | The Internet History Archive",
-    template: "%s | WebRewind"
+    default: "NetNostalgia | The Internet History Archive",
+    template: "%s | NetNostalgia"
   },
   description: "Travel back in time and explore over 50,000 historical websites from 1990 to 2024. Experience the classic retro web with our vintage browser emulators.",
   keywords: ["internet history", "web archive", "retro internet", "90s websites", "2000s websites", "wayback machine", "nostalgia", "windows 95 emulator"],
@@ -20,21 +20,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://web-rewind-7jt2.vercel.app/",
-    title: "WebRewind | The Internet History Archive",
+    title: "NetNostalgia | The Internet History Archive",
     description: "Travel back in time and explore over 50,000 historical websites from 1990 to 2024.",
-    siteName: "WebRewind",
+    siteName: "NetNostalgia",
     images: [
       {
         url: "/og-image.png", // Next.js will look for this in public folder, or fallback to default
         width: 1200,
         height: 630,
-        alt: "WebRewind Internet Archive Time Machine",
+        alt: "NetNostalgia Internet Archive Time Machine",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WebRewind | The Internet History Archive",
+    title: "NetNostalgia | The Internet History Archive",
     description: "Travel back in time and explore over 50,000 historical websites from 1990 to 2024.",
     images: ["/og-image.png"],
   },

@@ -71,7 +71,7 @@ export default function QuizPage() {
 
               <div className="mt-4">
                 <ShareButtons 
-                  title={`I am a ${result.year} Internet User on WebRewind! Discover your internet age.`} 
+                  title={`I am a ${result.year} Internet User on NetNostalgia! Discover your internet age.`} 
                   url="https://time-machine.app/quiz" 
                 />
               </div>

@@ -1,8 +1,8 @@
-# WebRewind
+# NetNostalgia
 
 ## Overview
 
-WebRewind is a nostalgic web application built with **Next.js**, **React**, and **Tailwind CSS**. It allows users to travel through the history of the web, exploring an archive of over 50,000 historical websites powered by **Supabase**. The platform features retro UI themes (1995 Web, 2005 Web 2.0, 2015 Modern), a functional 1990s desktop emulator for the "Birthday Simulator," and a functional vintage Netscape Navigator emulator powered by the **Wayback Machine API**.
+NetNostalgia is a nostalgic web application built with **Next.js**, **React**, and **Tailwind CSS**. It allows users to travel through the history of the web, exploring an archive of over 50,000 historical websites powered by **Supabase**. The platform features retro UI themes (1995 Web, 2005 Web 2.0, 2015 Modern), a functional 1990s desktop emulator for the "Birthday Simulator," and a functional vintage Netscape Navigator emulator powered by the **Wayback Machine API**.
 
 For detailed architecture and module information, please refer to the `/docs` folder.
 

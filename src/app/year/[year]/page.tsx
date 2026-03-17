@@ -42,7 +42,7 @@ export default async function YearPage({ params }: { params: Promise<{ year: str
           <p className="text-xl font-medium relative z-10 border-l-4 border-[var(--retro-primary)] pl-4">
             {data.description}
           </p>
-          <ShareButtons title={`The Internet in ${data.year} - WebRewind`} url={shareUrl} />
+          <ShareButtons title={`The Internet in ${data.year} - NetNostalgia`} url={shareUrl} />
         </section>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

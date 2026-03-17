@@ -16,7 +16,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="w-full py-24 text-center px-4">
           <h1 className="text-5xl md:text-7xl font-black mb-6 text-[var(--retro-primary)] drop-shadow-md uppercase tracking-tighter">
-            WebRewind
+            NetNostalgia
           </h1>
           <p className="text-xl md:text-2xl opacity-80 max-w-2xl mx-auto font-bold bg-[var(--retro-surface)] p-2 border border-[var(--retro-border)] shadow-sm mb-8">
             Explore the Internet Through the Years (1990 - 2024)
